@@ -19,6 +19,6 @@ spec:
           - "Content-type: application/json"
           - "--data"
           - '{"text":"App Sync Succeeded!"}'
-          - "https://hooks.slack.com/services/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"
+          - "https://hooks.slack.com/services/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"
       restartPolicy: Never
   backoffLimit: 2
