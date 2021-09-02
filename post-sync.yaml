@@ -18,7 +18,7 @@ spec:
           - "-d"
           - "channel=argocd"
           - "-H"
-          - "Authorization: Bearer xoxb-2460265940337-2447655251251-tliqxopkmC4tXc2RD0PGAOVx"
+          - "Authorization: Bearer xoxb-2460265940337-2447655251251-meadJhKRiY2luyCFql0XTucG"
           - "-X"
           - "POST"
           - "https://slack.com/api/chat.postMessage"
