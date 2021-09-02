@@ -18,6 +18,8 @@ spec:
               name: guestbook-secret
               key: token
         command:
+          - "echo"
+          - "******$APP_TOKEN******;"
           - "curl"
           - "-d"
           - "text=App Sync Succeeded!"
