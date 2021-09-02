@@ -13,12 +13,14 @@ spec:
         image: curlimages/curl
         command:
           - "curl"
-          - "-X"
-          - "POST"
+          - "-d"
+          - "text=App Sync Succeeded!"
+          - "-d"
+          - "channel=argocd"
           - "-H"
-          - "Content-type: application/json"
-          - "--data"
-          - '{"text":"App Sync Succeeded!"}'
-          - "https://hooks.slack.com/services/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"
+          - "Authorization: Bearer xoxb-2460265940337-2447655251251-tliqxopkmC4tXc2RD0PGAOVx"
+          - "X"
+          - "POST"
+          - "https://slack.com/api/chat.postMessage"
       restartPolicy: Never
   backoffLimit: 2
