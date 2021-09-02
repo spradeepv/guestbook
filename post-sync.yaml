@@ -15,8 +15,8 @@ spec:
           - "curl"
           - "-X"
           - "POST"
-		  - "-H"
-		  - "Content-type: application/json"
+          - "-H"
+          - "Content-type: application/json"
           - "--data"
           - '{"text":"App Sync Succeeded!"}'
           - "https://hooks.slack.com/services/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"
