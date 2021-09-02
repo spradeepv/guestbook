@@ -19,14 +19,14 @@ spec:
               key: token
         command:
           - "echo"
-          - "******$APP_TOKEN******;"
+          - "******$(APP_TOKEN)******;"
           - "curl"
           - "-d"
           - "text=App Sync Succeeded!"
           - "-d"
           - "channel=argocd"
           - "-H"
-          - "Authorization: Bearer $APP_TOKEN"
+          - "Authorization: Bearer $(APP_TOKEN)"
           - "-X"
           - "POST"
           - "https://slack.com/api/chat.postMessage"
