@@ -11,6 +11,12 @@ spec:
       containers:
       - name: slack-notification
         image: curlimages/curl
+        env:
+        - name: APP_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: guestbook-secret
+              key: token
         command:
           - "curl"
           - "-d"
@@ -18,7 +24,7 @@ spec:
           - "-d"
           - "channel=argocd"
           - "-H"
-          - "Authorization: Bearer xoxb-2460265940337-2447655251251-GbV8ivqTJZ5BgUoDSnQf5K2s"
+          - "Authorization: Bearer $APP_TOKEN"
           - "-X"
           - "POST"
           - "https://slack.com/api/chat.postMessage"
